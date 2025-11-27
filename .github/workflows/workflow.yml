@@ -1,0 +1,21 @@
+name: piplineworkflow
+
+on:
+ push:
+   branches:
+     - main
+ pull_request:
+   branches:
+      - main
+
+jobs:
+  build:
+    name: Azurepipelines
+    runs-on: ubuntu-latest
+    steps:
+    - name: Azurepipelines
+      uses: Azure/pipelines@v1
+      with:
+        azure-devops-project-url: https://dev.azure.com/ravikotatechie/my-Agileproj/_git/gitapp.git
+        azure-pipeline-name: 'github.com/Devops-Azure6'
+        azure-devops-token: ${{secrets.AZURE_DEVOPS_TOKEN}}
