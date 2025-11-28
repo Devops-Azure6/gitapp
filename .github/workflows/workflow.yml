@@ -18,4 +18,4 @@ jobs:
       with:
         azure-devops-project-url: https://dev.azure.com/ravikotatechie/my-Agileproj
         azure-pipeline-name: 'gitapp02'
-        azure-devops-token: ${{secrets.AZURE_DEVOPS_PAT}}
+        azure-devops-token: ${{secrets.AZURE_DEVOPS_TOKEN}}
